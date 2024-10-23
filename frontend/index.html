@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-like eCommerce</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #232f3e;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a.logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF9900;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-icons a {
+            margin-left: 20px;
+            color: white;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #37475a;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            color: white;
+            padding: 10px;
+        }
+
+        /* Main content styles */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            width: 230px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .product-card button {
+            background-color: #FF9900;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #FF9900;
+            padding: 0 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .product-card {
+                width: 100%;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">ClyDigital</a>
+        <input type="text" class="search-bar" placeholder="Search for products">
+        <div class="header-icons">
+            <a href="#">Account</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">All Categories</a>
+        <a href="#">Electronics</a>
+        <a href="#">Clothing</a>
+        <a href="#">Home & Kitchen</a>
+        <a href="#">Books</a>
+    </nav>
+
+    <!-- Main Content (Product Listings) -->
+    <div class="content">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Product 4">
+            <h2>Product 4</h2>
+            <p>$49.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Product 5">
+            <h2>Product 5</h2>
+            <p>$59.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AmazonClone | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

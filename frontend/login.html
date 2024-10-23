@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Login Page:
+
+The user enters their email and password to log in.
+The form is submitted via the fetch API to your backend’s /login endpoint.
+On successful login, the JWT token is saved to localStorage for later use (e.g., to authenticate further requests).-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AmazonClone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #FF9900;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .signup-link a {
+            text-decoration: none;
+            color: #FF9900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        try {
+            const res = await fetch('http://localhost:5000/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+            if (data.token) {
+                alert('Login successful');
+                localStorage.setItem('token', data.token);
+                window.location.href = '/dashboard.html'; // Redirect to the dashboard
+            } else {
+                alert('Login failed');
+            }
+        } catch (error) {
+            alert('Error logging in');
+        }
+    });
+    </script>
+
+</body>
+</html>

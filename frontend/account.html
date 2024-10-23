@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - AmazonClone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #232f3e;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a.logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF9900;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-icons a {
+            margin-left: 20px;
+            color: white;
+        }
+
+        /* Account Section */
+        .account-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 8px;
+        }
+        .login-form, .signup-form {
+            width: 40%;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #FF9900;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer a {
+            color: #FF9900;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .account-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .login-form, .signup-form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">AmazonClone</a>
+        <div class="header-icons">
+            <a href="account.html">Account</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </header>
+
+    <!-- Account Content -->
+    <div class="account-container">
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login to Your Account</h2>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="signup-form">
+            <h2>Create a New Account</h2>
+            <form action="/signup" method="post">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AmazonClone | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #232f3e;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a.logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF9900;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-icons a {
+            margin-left: 20px;
+            color: white;
+        }
+
+        /* Main Cart Section */
+        .cart-container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-info h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+        }
+        .cart-item-info p {
+            font-size: 16px;
+            color: #666;
+        }
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+        }
+        .cart-item-quantity input {
+            width: 40px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .remove-button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cart-total {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+        .cart-total h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .checkout-button {
+            background-color: #FF9900;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #FF9900;
+            padding: 0 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cart-item img {
+                margin-bottom: 10px;
+            }
+            .cart-item-quantity {
+                justify-content: center;
+            }
+            .cart-total {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">AmazonClone</a>
+        <div class="header-icons">
+            <a href="#">Account</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/120x120" alt="Product 1">
+            <div class="cart-item-info">
+                <h2>Product 1</h2>
+                <p>$19.99</p>
+            </div>
+            <div class="cart-item-quantity">
+                <input type="number" value="1" min="1">
+                <button class="remove-button">Remove</button>
+            </div>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/120x120" alt="Product 2">
+            <div class="cart-item-info">
+                <h2>Product 2</h2>
+                <p>$29.99</p>
+            </div>
+            <div class="cart-item-quantity">
+                <input type="number" value="1" min="1">
+                <button class="remove-button">Remove</button>
+            </div>
+        </div>
+
+        <!-- Cart Total Section -->
+        <div class="cart-total">
+            <h3>Total: $49.98</h3>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AmazonClone | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
